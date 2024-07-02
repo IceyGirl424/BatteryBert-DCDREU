@@ -69,7 +69,7 @@ def main(args):
     )
 
    # paths = [str(x) for x in Path(args.train_root).glob('**/*.txt')]
-    paths = ["/gpfs/home/lmunad/hpc_workshop_060324/BatteryBert-DCDREU/tokenizeBatterybert.txt"]
+    paths = ["/gpfs/home/lmunad/hpc_workshop_060324/BatteryBert-DCDREU/newtokenizer/tokenizeBatterybert.txt"]
 
     # initialize
     tokenizer = BertWordPieceTokenizer(
