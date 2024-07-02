@@ -68,7 +68,8 @@ def main(args):
         handlers=[logging.StreamHandler(sys.stdout)],
     )
 
-    paths = [str(x) for x in Path(args.train_root).glob('**/*.txt')]
+   # paths = [str(x) for x in Path(args.train_root).glob('**/*.txt')]
+    paths = ["/gpfs/home/lmunad/hpc_workshop_060324/BatteryBert-DCDREU/tokenizeBatterybert.txt"]
 
     # initialize
     tokenizer = BertWordPieceTokenizer(

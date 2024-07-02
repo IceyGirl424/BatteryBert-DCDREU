@@ -30,6 +30,7 @@ def parse_arguments():
     # Required parameters.
     parser.add_argument("--model_name_or_path", default=None, type=str,
                         help="The pre-trained model name or path.")
+    parser.add_argument("--tokenizer_path", default=None, type=str, help="The saved new tokenizer.")
     parser.add_argument("--output_dir", default=None, type=str,
                         help="The output dir for checkpoints and logging.")
     parser.add_argument("--train_root", default=None, type=str,
@@ -110,7 +111,7 @@ def main(args):
         handlers=[logging.StreamHandler(sys.stdout)],
     )
 
-    tokenizer = FinetuneTokenizerFast(args.model_name_or_path).get_tokenizer()
+    tokenizer = FinetuneTokenizerFast(args.tokenizer_path).get_tokenizer()
     train_dataset, eval_dataset = PaperDataset(args.model_name_or_path, args.train_root, args.eval_root).get_dataset()
     model = DocClassModel(args.model_name_or_path).get_model()
     data_collator = default_data_collator
