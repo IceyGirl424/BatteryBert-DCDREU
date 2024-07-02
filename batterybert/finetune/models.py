@@ -28,6 +28,7 @@ class FinetuneModel:
         :return: BERTConfig
         """
         config = BertConfig.from_pretrained(self.config if self.config else self.model_name_or_path)
+        config.num_labels = 17
         return config
 
 

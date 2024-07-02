@@ -19,7 +19,7 @@ class DocClassifier:
         :param model_name_or_path: the fine-tuned model
         """
         self.tokenizer = BertTokenizerFast.from_pretrained(model_name_or_path)
-        self.model = BertForSequenceClassification.from_pretrained(model_name_or_path, num_labels=2)
+        self.model = BertForSequenceClassification.from_pretrained(model_name_or_path, num_labels=17)
 
     def classify(self, text, max_length=512):
         """
