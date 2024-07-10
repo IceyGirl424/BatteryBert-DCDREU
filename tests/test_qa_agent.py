@@ -13,7 +13,7 @@ from batterybert.apps import QAAgent
 class TestQAAgent(unittest.TestCase):
     def test_qa_agent(self):
         # Declaration
-        model_name = "batterydata/test1"
+        model_name = "batterydata/batterybert-cased-squad-v1"
         question = "When was University of Cambridge founded?"
         context = "The University of Cambridge is a collegiate research university in Cambridge, United Kingdom. " \
                   "Founded in 1209 and granted a royal charter by Henry III in 1231, Cambridge is the second-oldest " \
