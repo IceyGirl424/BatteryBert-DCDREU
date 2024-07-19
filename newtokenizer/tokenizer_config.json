@@ -5,5 +5,5 @@
   "lowercase": false,
   "max_len": 512,
   "model_max_length": 512,
-  "vocab_file": "newBERTTokenizer-vocab.txt",
+  "vocab_file": "newBERTTokenizer-vocab.txt"
 }
