@@ -57,8 +57,8 @@ class PaperDataset(FinetuneDataset):
         :return: DocDataset of training data and eval data
         """
         tokenizer = FinetuneTokenizerFast(self.model_root).get_tokenizer()
-        training_data = pd.read_csv(self.training_root)
-        test_data = pd.read_csv(self.test_root)
+        training_data = pd.read_csv("/gpfs/home/lmunad/hpc_workshop_060324/BatteryBert-DCDREU/trainingBert/trainingsetBatteryBert.csv", engine='python')
+        test_data = pd.read_csv("/gpfs/home/lmunad/hpc_workshop_060324/BatteryBert-DCDREU/testingMyBert/testBatteryBert.csv", engine='python')
 
         if "abstract" not in training_data or "abstract" not in test_data:
             raise ValueError("Need a valid dataset including abstract.")
